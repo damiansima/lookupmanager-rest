@@ -12,11 +12,18 @@
   <!--  Define the router -->
   <bean name="router" class="org.restlet.ext.spring.SpringBeanRouter" />
   
-  <!-- Define all the routes -->
+  <!-- Define all the routes-messages exposed by the REST api -->
   <bean name="/list/partner/{partner}/client/{client}/lookuptable/{lookuptable}" class="com.mulesoft.lookup.rest.resource.ListLookUpTableResource" scope="prototype" autowire="byName" />
   <bean name="/list/partner/{partner}/client/{client}/lookuptable/{lookuptable}/key/{key}" class="com.mulesoft.lookup.rest.resource.ListLookUpTableResource" scope="prototype" autowire="byName" />
   
+  
   <bean name="/instert/partner/{partner}/client/{client}/lookuptable/{lookuptable}/keyfields/{keyfields}/valuefields/{valuefields}" class="com.mulesoft.lookup.rest.resource.InsertLookUpTableResource" scope="prototype" autowire="byName" />
+  <bean name="/batchinstert/partner/{partner}/client/{client}/lookuptable/{lookuptable}/keyfields/{keyfields}/valuefields/{valuefields}/batchfile/{batchfile}" class="com.mulesoft.lookup.rest.resource.InsertLookUpTableResource" scope="prototype" autowire="byName" />
+  
+  <bean name="/delete/partner/{partner}/client/{client}/lookuptable/{lookuptable}/key/{key}" class="com.mulesoft.lookup.rest.resource.DeleteLookUpTableResource" scope="prototype" autowire="byName" />
+  
+  <bean name="/create/partner/{partner}/client/{client}/lookuptable/{lookuptable}/keyfields/{keyfields}/valuefields/{valuefields}" class="com.mulesoft.lookup.rest.resource.AdminLookUpTableResource" scope="prototype" autowire="byName" />
+  <bean name="/drop/partner/{partner}/client/{client}/lookuptable/{lookuptable}" class="com.mulesoft.lookup.rest.resource.AdminLookUpTableResource" scope="prototype" autowire="byName" />
     
 </beans>
 

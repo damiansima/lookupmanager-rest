@@ -39,15 +39,5 @@ public class ListLookUpTableResource extends AbstractLookUpTableResource {
 	}
 
 
-	/**
-	 * It's the REST operation to delete information from a Lookup Table
-	 * 
-	 * @return
-	 */
-	@Delete
-	public String deleteData() {
-		return "OMG... the data was delete";
-	}
-
 	// @Post
 }

@@ -99,16 +99,4 @@ public class ListLookUpTableResourceTest {
 		EasyMock.verify(requestMock);
 	}
 
-	/**
-	 * Validate that the getData returns a valid JSON representation of the
-	 * LookUp Table requested.
-	 */
-	@Test
-	public void deleteDataTest() {
-		String response = new ListLookUpTableResource().deleteData();
-
-		Assert.assertNotNull("The response shouldn't be null.", response);
-		System.out.println(response);
-
-	}
 }
