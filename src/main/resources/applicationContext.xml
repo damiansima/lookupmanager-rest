@@ -24,7 +24,23 @@
   
   <bean name="/create/partner/{partner}/client/{client}/lookuptable/{lookuptable}/keyfields/{keyfields}/valuefields/{valuefields}" class="com.mulesoft.lookup.rest.resource.AdminLookUpTableResource" scope="prototype" autowire="byName" />
   <bean name="/drop/partner/{partner}/client/{client}/lookuptable/{lookuptable}" class="com.mulesoft.lookup.rest.resource.AdminLookUpTableResource" scope="prototype" autowire="byName" />
-    
+  
+  
+  <!--  
+  POST /lookuptables/table_name?keys=value1,valueN&fields=value1,valueN
+  GET /lookuptables/table_name
+  GET /lookuptables/table_name?keys=value1,valueN
+  PUT /lookuptables/table_name?keys=value1,valueN&fields=value1,valueN
+  DELETE /lookuptables/table_name
+  DELETE /lookuptables/table_name?keys=value1,valueN
+  -->
+  <bean name="/lookuptables/{lookuptables}" class="com.mulesoft.lookup.rest.resource.LookUpTableResource" scope="prototype" autowire="byName" />
+  
+  
+  
+  
+  
+      
 </beans>
 
 

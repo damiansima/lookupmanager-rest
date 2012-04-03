@@ -14,13 +14,16 @@ public class ListLookUpTableResource extends AbstractLookUpTableResource {
 		builder.append("Client: ").append(client).append("|");
 		builder.append("LookUp Table: ").append(lookuptable).append("|");
 
+		
+		String plus = this.getQuery().getValues("lala").toString();
+		
 		String key = "";
 		if (lutRequest.getAttributes().get(KEY_ATTRIBUTE) != null) {
 			key = lutRequest.getAttributes().get(KEY_ATTRIBUTE).toString();
 			builder.append("Key: ").append(key).append("|");
 		}
 		
-		
+		builder.append(plus);
 		
 		return builder.toString();
 
